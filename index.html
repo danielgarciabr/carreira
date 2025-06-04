@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Camargo Garcia - Landing Page</title>
+    <!-- Inclui o Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efeito sutil de brilho nos botões ao focar */
+        .btn-glow:focus {
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* blue-500 com opacidade */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-3xl p-8 md:p-12 max-w-4xl w-full flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 transform hover:scale-[1.005] transition-transform duration-300 ease-in-out">
+        <!-- Seção da Foto e Nome -->
+        <div class="flex-shrink-0 relative group">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQEWDkDyOAXHRw/profile-displayphoto-shrink_400_400/B4DZZyTbDOG0Ag-/0/1745674416736?e=1754524800&v=beta&t=qfPX-Aw-Nk1d_Uhbd8Inu6UVelp-tvywLmgOmXKMovA" alt="Daniel Camargo Garcia" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-blue-500 shadow-lg group-hover:border-purple-500 transition-colors duration-300 ease-in-out transform group-hover:scale-105">
+            <!-- Overlay para um efeito visual sutil ao passar o mouse -->
+            <div class="absolute inset-0 rounded-full bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+        </div>
+
+        <!-- Seção de Conteúdo -->
+        <div class="text-center md:text-left">
+            <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 leading-tight tracking-tight">
+                Daniel Camargo Garcia
+            </h1>
+            <p class="text-base md:text-lg text-gray-700 mb-6 max-w-prose">
+                Profissional de Tecnologia da Informação (TI) com mais de 20 anos de experiência em gestão de projetos, qualidade de software (QA), automação de testes e teste de performance. Atuação em projetos de CRM, ERP, BPM, BI e RPA, garantindo a entrega de soluções de alta performance. Habilidade de liderança de equipes, comunicação, negociação, resolução de problemas e gestão de tempo.
+            </p>
+
+            <!-- Links de Ação -->
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://www.linkedin.com/in/danielgarciabr/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    Meu LinkedIn
+                </a>
+                <a href="https://drive.google.com/file/d/1TVvWgfgB12YyBXS_82fhu-4EvFM6O4Fx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-blue-600 text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    Ver Currículo
+                </a>
+                <a href="https://danibot.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    Conheça o DaniBot
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
