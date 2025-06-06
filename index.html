@@ -7,6 +7,7 @@
     <!-- Inclui o Tailwind CSS para estilização -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -25,41 +26,146 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 min-h-screen flex items-center justify-center p-4">
-    <div class="bg-slate-800 rounded-2xl shadow-2xl p-8 md:p-12 max-w-4xl w-full flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 transform hover:scale-[1.005] transition-transform duration-300 ease-in-out relative z-10">
-        <!-- Seção da Foto e Nome -->
-        <div class="flex-shrink-0 relative group">
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQEWDkDyOAXHRw/profile-displayphoto-shrink_400_400/B4DZZyTbDOG0Ag-/0/1745674416736?e=1754524800&v=beta&t=qfPX-Aw-Nk1d_Uhbd8Inu6UVelp-tvywLmgOmXKMovA" alt="Daniel Camargo Garcia" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-purple-500 shadow-lg group-hover:border-purple-500 transition-colors duration-300 ease-in-out transform group-hover:scale-105">
-            <!-- Overlay para um efeito visual sutil ao passar o mouse -->
-            <div class="absolute inset-0 rounded-full bg-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-        </div>
-
-        <!-- Seção de Conteúdo -->
-        <div class="text-center md:text-left">
-            <h1 class="text-2xl md:text-3xl font-extrabold text-white mb-3 leading-tight tracking-tight">
-                Daniel Camargo Garcia
-            </h1>
-            <p class="text-base md:text-lg text-gray-100 mb-6 max-w-prose">
-                Profissional de Tecnologia da Informação (TI) com mais de 20 anos de experiência em gestão de projetos, qualidade de software (QA), automação de testes e teste de performance. Atuação em projetos de CRM, ERP, BPM, BI e RPA, garantindo a entrega de soluções de alta performance. Habilidade de liderança de equipes, comunicação, negociação, resolução de problemas e gestão de tempo.
-            </p>
-
-            <!-- Links de Ação -->
-            <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="https://www.linkedin.com/in/danielgarciabr/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"/> </svg> Meu LinkedIn
-                </a>
-                <a href="https://drive.google.com/file/d/1TVvWgfgB12YyBXS_82fhu-4EvFM6O4Fx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 border border-gray-600 text-base font-medium rounded-full text-gray-200 bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/> </svg> Ver Currículo
-                </a>
-                <a href="https://danibot.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/> </svg> Conheça o DaniBot
-                </a>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen flex flex-col items-center p-4 text-gray-100 font-inter">
+    <div class="w-full max-w-6xl mx-auto space-y-16 py-12 relative z-10">
+        <!-- Profile Section -->
+        <div class="bg-slate-800 rounded-2xl shadow-2xl p-8 md:p-12 w-full flex flex-col md:flex-row items-center md:items-start justify-center space-y-8 md:space-y-0 md:space-x-12 transform hover:scale-[1.005] transition-transform duration-300 ease-in-out">
+            <div class="flex-shrink-0 relative group">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEWDkDyOAXHRw/profile-displayphoto-shrink_400_400/B4DZZyTbDOG0Ag-/0/1745674416736?e=1754524800&v=beta&t=qfPX-Aw-Nk1d_Uhbd8Inu6UVelp-tvywLmgOmXKMovA" alt="Daniel Camargo Garcia" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-purple-500 shadow-lg group-hover:border-purple-500 transition-colors duration-300 ease-in-out transform group-hover:scale-105">
+                <div class="absolute inset-0 rounded-full bg-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            </div>
+            <div class="text-center md:text-left">
+                <h1 class="text-2xl md:text-3xl font-extrabold text-white mb-3 leading-tight tracking-tight">
+                    Daniel Camargo Garcia
+                </h1>
+                <p class="text-base md:text-lg text-gray-100 mb-6 max-w-prose">
+                    Profissional de Tecnologia da Informação (TI) com mais de 20 anos de experiência em gestão de projetos, qualidade de software (QA), automação de testes e teste de performance. Atuação em projetos de CRM, ERP, BPM, BI e RPA, garantindo a entrega de soluções de alta performance. Habilidade de liderança de equipes, comunicação, negociação, resolução de problemas e gestão de tempo.
+                </p>
             </div>
         </div>
+
+        <!-- Action Buttons Section -->
+        <section class="action-buttons-section flex flex-wrap justify-center items-center gap-2">
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://www.linkedin.com/in/danielgarciabr/" target="_blank" rel="noopener noreferrer" class="w-44 h-20 inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"/> </svg> Meu LinkedIn
+                </a>
+                <a href="https://drive.google.com/file/d/1TVvWgfgB12YyBXS_82fhu-4EvFM6O4Fx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-44 h-20 inline-flex items-center justify-center px-6 py-4 border border-gray-600 text-base font-medium rounded-full text-gray-200 bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/> </svg> Ver Currículo
+                </a>
+                <a href="https://danibot.streamlit.app/" target="_blank" rel="noopener noreferrer" class="w-44 h-20 inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/> </svg> Conheça o DaniBot
+                </a>
+                <a href="https://calendar.app.google/KmNNWmnh8YrwVcm97" target="_blank" rel="noopener noreferrer" class="w-44 h-20 inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"/> </svg> Agende uma Reunião
+                </a>
+                <a href="https://wa.me/21988941389" target="_blank" rel="noopener noreferrer" class="w-44 h-20 inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mr-2 inline-block"> <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/> </svg> Chat on WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- LinkedIn Articles Carousel Section -->
+        <div class="mt-16 relative z-10"> <!-- space-y-16 on wrapper will handle this -->
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Ultimos Artigos</h2>
+            <div class="swiper mySwiper max-w-6xl mx-auto"> <!-- This max-w-6xl is fine as it's inside the main wrapper's max-w-6xl -->
+            <div class="swiper-wrapper pb-12"> <!-- Added pb-12 to swiper-wrapper for pagination space if needed -->
+                    <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden flex flex-col h-96">
+                        <img src="https://github.com/danielgarciabr/carreira/blob/main/img/post1.png?raw=true" alt="LinkedIn Post Image 1" class="w-full h-48 object-cover">
+                        <div class="p-4 bg-slate-700 rounded-b-lg shadow-lg flex flex-col flex-grow">
+                            <p class="text-gray-300 text-sm mb-3 overflow-hidden flex-grow">🤖 Apresentando o DaniBot: O Robô que sabe tudo da minha Carreira 🤖</p>
+                            <a href="https://www.linkedin.com/posts/danielgarciabr_inteligenciaartificial-ia-python-activity-7335417178889801728-6Wlw" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">View Post</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden flex flex-col h-96">
+                        <img src="https://github.com/danielgarciabr/carreira/blob/main/img/post2.png?raw=true" alt="LinkedIn Post Image 2" class="w-full h-48 object-cover">
+                        <div class="p-4 bg-slate-700 rounded-b-lg shadow-lg flex flex-col flex-grow">
+                            <p class="text-gray-300 text-sm mb-3 overflow-hidden flex-grow">Gostaria de compartilhar que recebi uma nova certificação: IMERSÃO INTELIGÊNCIA ARTIFICIAL Google Gemini 3ª edição da empresa Alura!</p>
+                            <a href="https://www.linkedin.com/posts/danielgarciabr_gostaria-de-compartilhar-que-recebi-uma-nova-activity-7333553073476288512-QLmb" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">View Post</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden flex flex-col h-96">
+                        <img src="https://github.com/danielgarciabr/carreira/blob/main/img/post3.png?raw=true" alt="LinkedIn Post Image 3" class="w-full h-48 object-cover">
+                        <div class="p-4 bg-slate-700 rounded-b-lg shadow-lg flex flex-col flex-grow">
+                            <p class="text-gray-300 text-sm mb-3 overflow-hidden flex-grow">🚀 Transformação Digital com IA: Lições Aprendidas na Gestão de Projetos, Ao analisar alguns projetos de implantação de Inteligência Artificia</p>
+                            <a href="https://www.linkedin.com/posts/danielgarciabr_why-most-ai-projects-fail-10-mistakes-to-activity-7328773991916060673-P2kS" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">View Post</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden flex flex-col h-96">
+                        <img src="https://github.com/danielgarciabr/carreira/blob/main/img/post4.png?raw=true" alt="LinkedIn Post Image 4" class="w-full h-48 object-cover">
+                        <div class="p-4 bg-slate-700 rounded-b-lg shadow-lg flex flex-col flex-grow">
+                            <p class="text-gray-300 text-sm mb-3 overflow-hidden flex-grow">LinkedIn ficou mais interessante com a ajuda da IA! 🤖 Recentemente, usei o NotebookLM para analisar meu currículo e</p>
+                            <a href="https://www.linkedin.com/posts/danielgarciabr_inovaaexaeto-tecnologia-inteligaeanciaartificial-activity-7328056806734237697-1wC_" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">View Post</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden flex flex-col h-96">
+                        <img src="https://github.com/danielgarciabr/carreira/blob/main/img/post5.png?raw=true" alt="LinkedIn Post Image 5" class="w-full h-48 object-cover">
+                        <div class="p-4 bg-slate-700 rounded-b-lg shadow-lg flex flex-col flex-grow">
+                            <p class="text-gray-300 text-sm mb-3 overflow-hidden flex-grow">Explorando o TestRail: Essa ferramenta é mais uma opção de ferramenta de Gestão de Testes com custo de licenciamento SaaS. Para equipes que buscam organização,</p>
+                            <a href="https://www.linkedin.com/posts/danielgarciabr_dicadodani-testmanagement-testrail-activity-7319392737831583744-VIIs" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">View Post</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next text-purple-500"></div>
+                <div class="swiper-button-prev text-purple-500"></div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="mt-24 mb-16 max-w-2xl mx-auto p-6 relative z-10"> <!-- This mt-24 and mb-16 might be adjusted by space-y-16 from wrapper -->
+            <h2 class="text-2xl font-bold text-white mb-8 text-center">Fale comigo!</h2>
+            <form id="contact-form">
+                <div class="mb-4">
+                    <label for="form-name" class="block text-sm font-medium text-gray-200 mb-1">Name</label>
+                    <input type="text" id="form-name" name="name" required placeholder="Your Name" class="w-full p-3 rounded-md bg-slate-700 text-gray-100 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-400">
+                </div>
+                <div class="mb-4">
+                    <label for="form-email" class="block text-sm font-medium text-gray-200 mb-1">Email</label>
+                    <input type="email" id="form-email" name="email" required placeholder="Your Email" class="w-full p-3 rounded-md bg-slate-700 text-gray-100 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-400">
+                </div>
+                <div class="mb-4">
+                    <label for="form-subject" class="block text-sm font-medium text-gray-200 mb-1">Subject</label>
+                    <select id="form-subject" name="subject" class="w-full p-3 rounded-md bg-slate-700 text-gray-100 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <option>Interview</option>
+                        <option>Business Opportunity</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label for="form-description" class="block text-sm font-medium text-gray-200 mb-1">Message</label>
+                    <textarea id="form-description" name="description" rows="4" required placeholder="Your Message" class="w-full p-3 rounded-md bg-slate-700 text-gray-100 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-400"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="form-send-button" class="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition ease-in-out duration-150 transform hover:-translate-y-1 btn-glow">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div id="particles-js"></div>
+
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // Particles.js Init
         particlesJS("particles-js", {
             "particles": {
                 "number": {
@@ -124,6 +230,53 @@
                 }
             },
             "retina_detect": true
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Swiper JS Init
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 }
+            }
+        });
+
+        // Contact Form Script
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById('form-name').value;
+            let emailField = document.getElementById('form-email').value;
+            let subject = document.getElementById('form-subject').value;
+            let description = document.getElementById('form-description').value;
+
+            // Basic validation check
+            if (!name.trim() || !emailField.trim() || !description.trim()) {
+                alert('Please fill in all required fields (Name, Email, Message).');
+                return;
+            }
+
+            let mailtoLink = 'mailto:danielgarciabr@gmail.com' +
+                           '?subject=' + encodeURIComponent('Contact Form: ' + subject + ' - From: ' + name) +
+                           '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + emailField + '\n\nMessage:\n' + description);
+
+            window.location.href = mailtoLink;
         });
     </script>
 </body>
